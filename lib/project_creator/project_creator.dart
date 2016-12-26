@@ -20,7 +20,7 @@ class ProjectCreator {
       'https://github.com/jaguar-examples/$repo',
     ];
 
-    if(_name is String) {
+    if (_name is String) {
       gitArguments.add(_name);
     }
 

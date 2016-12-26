@@ -4,5 +4,4 @@
 //TODO import 'package:jaguar_cli/jaguar_cli.dart';
 //TODO import 'package:test/test.dart';
 
-void main() {
-}
+void main() {}
