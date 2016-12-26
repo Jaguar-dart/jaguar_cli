@@ -1,0 +1,26 @@
+name: jaguar_cli
+version: 0.0.1
+description: CLI for jaguar-dart
+authors:
+- Ravi Teja Gudapati <tejainece@gmail.com>
+- Kevin Segaud <segaud.kevin@gmail.com>
+homepage: http://jaguar-dart.github.io
+
+executables:
+  jaguar:
+
+environment:
+  sdk: '>=1.8.0 <2.0.0'
+
+dependencies:
+  jaguar_generator:
+  jaguar_serializer:
+  jaguar_validate:
+  jaguar_orm:
+  args: ^0.13.7
+  console: ^2.2.3
+  build: ">=0.4.1 <0.5.0"
+  yaml: ">=2.1.10 <3.0.0"
+
+dev_dependencies:
+  test: '>=0.12.0 <0.13.0'
