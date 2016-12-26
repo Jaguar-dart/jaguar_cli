@@ -7,17 +7,22 @@ import "package:console/console.dart";
 class ProjectCreator {
   final String repo;
 
-  final String name;
+  final String _name;
 
-  ProjectCreator(this.repo, this.name) {}
+  String get name => _name ?? repo;
+
+  ProjectCreator(this._name, this.repo) {}
 
   Future<Null> run() async {
-    var gitArguments = [
+    List<String> gitArguments = [
       'clone',
       '--single-branch',
       'https://github.com/jaguar-examples/$repo',
-      name,
     ];
+
+    if(_name is String) {
+      gitArguments.add(_name);
+    }
 
     Console.setTextColor(Color.BLUE.id, bright: Color.BLUE.bright);
     stdout.write('Creating $name ...');

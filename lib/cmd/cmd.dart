@@ -28,35 +28,33 @@ class CommandCreator {
 
   void _addCreateInterceptorCmd() {
     ArgParser cmd = _parser.addCommand('create::interceptor');
-    cmd.addOption('name', abbr: 'n');
+    cmd.addOption('name', abbr: 'n', help: 'Name of the interceptor');
   }
 
   void _addCreateProjectCmd() {
     ArgParser cmd = _parser.addCommand('create::project');
-    cmd.addOption('repo', abbr: 'r');
-    cmd.addOption('name', abbr: 'n');
+    cmd.addOption('repo',
+        abbr: 'r',
+        help: 'Repository from https://github.com/jaguar-examples to clone', defaultsTo: 'boilerplate');
+    cmd.addOption('name', abbr: 'n', help: 'Name of the project');
   }
 
   void _addCreateRouteGroupCmd() {
     ArgParser cmd = _parser.addCommand('create::routegroup');
-    cmd.addOption('name', abbr: 'n');
+    cmd.addOption('name', abbr: 'n', help: 'Name of the RouteGroup');
   }
 
   Future<Null> parse(List<String> arguments) async {
     ArgResults res = _parser.parse(arguments).command;
 
-    if(res == null) {
+    if (res == null) {
       print('No recognisable command specified!');
 
       print(_parser.usage);
       return;
     }
 
-    switch(res.name) {
-      case 'build':
-        cli.Builder builder = new cli.Builder();
-        build(builder.phaseGroup, deleteFilesByDefault: true);
-        break;
+    switch (res.name) {
       case 'watch':
         cli.Builder builder = new cli.Builder();
         watch(builder.phaseGroup, deleteFilesByDefault: true);
@@ -66,6 +64,10 @@ class CommandCreator {
         final String name = res['name'];
         cli.ProjectCreator projCre = new cli.ProjectCreator(name, repo);
         await projCre.run();
+        break;
+      case 'build':
+        cli.Builder builder = new cli.Builder();
+        build(builder.phaseGroup, deleteFilesByDefault: true);
         break;
     }
   }
