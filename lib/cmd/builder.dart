@@ -13,7 +13,10 @@ class BuilderCommand extends Command {
 
   @override
   run() async {
+    print('Building ...');
+    print('');
     cli.Builder builder = new cli.Builder();
-    build(builder.phaseGroup, deleteFilesByDefault: true);
+    build(builder.phaseGroup,
+        deleteFilesByDefault: true, logLevel: Level.WARNING);
   }
 }

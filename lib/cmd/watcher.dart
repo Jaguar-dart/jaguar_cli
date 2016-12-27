@@ -14,6 +14,8 @@ class WatchCommand extends Command {
 
   @override
   run() async {
+    print('Building on file changes ...');
+    print('');
     cli.Builder builder = new cli.Builder();
     watch(builder.phaseGroup, deleteFilesByDefault: true);
   }
