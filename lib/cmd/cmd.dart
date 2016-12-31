@@ -11,3 +11,4 @@ part 'builder.dart';
 part 'watcher.dart';
 part 'create_project.dart';
 part 'create_interceptor.dart';
+part 'version.dart';
