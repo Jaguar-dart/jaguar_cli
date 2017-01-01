@@ -16,7 +16,7 @@ class BuilderCommand extends Command {
     print('Building ...');
     print('');
     cli.Builder builder = new cli.Builder();
-    build(builder.phaseGroup,
+    await build(builder.phaseGroup,
         deleteFilesByDefault: true, logLevel: Level.WARNING);
   }
 }

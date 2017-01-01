@@ -17,7 +17,7 @@ class WatchCommand extends Command {
     print('Building on file changes ...');
     print('');
     cli.Builder builder = new cli.Builder();
-    watch(builder.phaseGroup,
+    await watch(builder.phaseGroup,
         deleteFilesByDefault: true, logLevel: Level.WARNING);
   }
 }
