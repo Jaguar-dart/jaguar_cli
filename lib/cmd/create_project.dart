@@ -7,6 +7,8 @@ class CreateProjectCommand extends Command {
         help: 'Repository from https://github.com/jaguar-examples to clone',
         defaultsTo: 'boilerplate');
     argParser.addOption('name', abbr: 'n', help: 'Name of the project');
+    argParser.addFlag('list',
+        abbr: 'l', help: 'Lists all available repositories');
   }
 
   @override
@@ -21,7 +23,19 @@ class CreateProjectCommand extends Command {
   run() async {
     final String repo = argResults['repo'];
     final String name = argResults['name'];
-    cli.ProjectCreator projCre = new cli.ProjectCreator(name, repo);
-    await projCre.run();
+
+    final bool list = argResults['list'];
+
+    if (list is! bool || !list) {
+      cli.ProjectCreator projCre = new cli.ProjectCreator(name, repo);
+      await projCre.run();
+    } else {
+      cli.TemplatesLister lister = new cli.TemplatesLister();
+      List<String> repos = await lister.list();
+
+      for (String repo in repos) {
+        print(repo);
+      }
+    }
   }
 }
