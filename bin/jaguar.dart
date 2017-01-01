@@ -17,7 +17,8 @@ main(List<String> arguments) async {
     ..addCommand(new WatchCommand())
     ..addCommand(new CreateProjectCommand())
     ..addCommand(new CreateInterceptorCommand())
-    ..addCommand(new VersionCommand());
+    ..addCommand(new VersionCommand())
+    ..addCommand(new ListProjectTemplateCommand());
 
   try {
     await runner.run(arguments);

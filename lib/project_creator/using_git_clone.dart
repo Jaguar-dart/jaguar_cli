@@ -4,14 +4,14 @@ import 'dart:io';
 import 'dart:async';
 import "package:console/console.dart";
 
-class ProjectCreator {
+class ProjectCreatorUsingGitClone {
   final String repo;
 
   final String _name;
 
   String get name => _name ?? repo;
 
-  ProjectCreator(this._name, this.repo) {}
+  ProjectCreatorUsingGitClone(this._name, this.repo) {}
 
   Future<Null> run() async {
     List<String> gitArguments = [
