@@ -18,7 +18,8 @@ main(List<String> arguments) async {
     ..addCommand(new CreateProjectCommand())
     ..addCommand(new CreateInterceptorCommand())
     ..addCommand(new VersionCommand())
-    ..addCommand(new ListProjectTemplateCommand());
+    ..addCommand(new ListProjectTemplateCommand())
+    ..addCommand(new swaggerGeneratorCommand());
 
   try {
     await runner.run(arguments);
