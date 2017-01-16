@@ -1,5 +1,5 @@
 name: jaguar_cli
-version: 0.0.16
+version: 0.0.17
 description: Command line tool for jaguar-dart
 authors:
 - Ravi Teja Gudapati <tejainece@gmail.com>
@@ -13,7 +13,7 @@ environment:
   sdk: '>=1.8.0 <2.0.0'
 
 dependencies:
-  jaguar_generator: '>=0.1.15+2 <0.2.0'
+  jaguar_generator: '>=0.1.17 <0.2.0'
   jaguar_serializer: '>=0.1.7 <0.2.0'
   jaguar_validate: '>=0.0.8 <0.1.0'
   jaguar_orm: '>=0.0.1 <0.1.0'
