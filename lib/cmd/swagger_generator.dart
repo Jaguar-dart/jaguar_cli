@@ -1,6 +1,6 @@
 part of jaguar_cli.cmd;
 
-class swaggerGeneratorCommand extends Command {
+class SwaggerGeneratorCommand extends Command {
   swaggerGeneratorCommand() {}
 
   @override

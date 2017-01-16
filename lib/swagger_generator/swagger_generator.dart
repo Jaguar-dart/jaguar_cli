@@ -1,7 +1,5 @@
 library jaguar_cli.swagger_generator;
 
-import 'dart:async';
-
 import 'dart:io';
 import 'package:build/build.dart';
 import 'package:yaml/yaml.dart';
