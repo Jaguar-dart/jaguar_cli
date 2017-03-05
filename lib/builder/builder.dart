@@ -8,7 +8,7 @@ import 'package:yaml/yaml.dart';
 
 import 'package:jaguar_generator/hook/api/import.dart';
 import 'package:jaguar_generator/hook/route_group/import.dart';
-import 'package:jaguar_serializer/generator/hook/make_serializer/make_serializer.dart';
+import 'package:jaguar_serializer/src/generator/generator.dart';
 import 'package:jaguar_validate/generator/hook/hook.dart';
 import 'package:jaguar_orm/generator/hook/hook.dart';
 
