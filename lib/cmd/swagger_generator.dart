@@ -1,5 +1,7 @@
 part of jaguar_cli.cmd;
 
+/* TODO
+
 class SwaggerGeneratorCommand extends Command {
   swaggerGeneratorCommand() {}
 
@@ -18,3 +20,5 @@ class SwaggerGeneratorCommand extends Command {
         deleteFilesByDefault: true, logLevel: Level.WARNING);
   }
 }
+
+*/

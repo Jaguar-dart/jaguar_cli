@@ -2,12 +2,11 @@ library jaguar_cli.build;
 
 import 'dart:io';
 
-import 'package:build/build.dart';
+import 'package:build_runner/build_runner.dart';
 import 'package:source_gen/source_gen.dart';
 import 'package:yaml/yaml.dart';
 
 import 'package:jaguar_generator/hook/api/import.dart';
-import 'package:jaguar_generator/hook/route_group/import.dart';
 import 'package:jaguar_serializer/src/generator/generator.dart';
 import 'package:jaguar_validate/generator/hook/hook.dart';
 import 'package:jaguar_orm/generator/hook/hook.dart';
@@ -87,7 +86,6 @@ class Builder {
   Phase get apiPhase => new Phase()
     ..addAction(
         new GeneratorBuilder(const [
-          const RouteGroupGenerator(),
           const ApiGenerator(),
         ]),
         new InputSet(_projectName, _apis));

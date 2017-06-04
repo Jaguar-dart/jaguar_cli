@@ -6,7 +6,7 @@ import 'package:jaguar_cli/project_creator/using_archive.dart' as cli;
 import 'package:jaguar_cli/interceptor_creator/interceptor_creator.dart' as cli;
 import 'package:jaguar_cli/list_projects/list_projects.dart' as cli;
 import 'package:jaguar_cli/swagger_generator/swagger_generator.dart' as cli;
-import 'package:build/build.dart';
+import 'package:build_runner/build_runner.dart';
 import 'package:logging/logging.dart';
 
 part 'builder.dart';
