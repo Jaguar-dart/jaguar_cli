@@ -9,16 +9,14 @@ import "package:console/console.dart";
 main(List<String> arguments) async {
   Console.init();
 
-  CommandRunner runner = new CommandRunner(
-      "jaguar", "Command-line tools for the Jaguar framework.");
+  CommandRunner runner =
+      CommandRunner("jaguar", "Command-line tools for the Jaguar framework.");
 
   runner
-    ..addCommand(new BuilderCommand())
-    ..addCommand(new WatchCommand())
-    ..addCommand(new CreateProjectCommand())
-    ..addCommand(new CreateInterceptorCommand())
-    ..addCommand(new VersionCommand())
-    ..addCommand(new ListProjectTemplateCommand());
+    ..addCommand(CreateProjectCommand())
+    ..addCommand(VersionCommand())
+    ..addCommand(ListProjectTemplateCommand())
+    ..addCommand(BeginProjectCommand());
 
   try {
     await runner.run(arguments);

@@ -11,12 +11,8 @@ class ListProjectTemplateCommand extends Command {
       "Lists all project templates in https://github.com/jaguar-examples as template.";
 
   @override
-  run() async {
+  void run() {
     cli.TemplatesLister lister = new cli.TemplatesLister();
-    List<String> repos = await lister.list();
-
-    for (String repo in repos) {
-      print(repo);
-    }
+    lister.list();
   }
 }

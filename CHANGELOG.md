@@ -1,5 +1,6 @@
 # Changelog
 
-## 0.0.1
+## 2.1.1
 
-- Initial version, created by Stagehand
++ Removed generators
++ Added `begin` command

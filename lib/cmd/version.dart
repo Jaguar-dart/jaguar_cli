@@ -11,6 +11,6 @@ class VersionCommand extends Command {
 
   @override
   run() async {
-    print('Jaguar.dart CLI 0.0.29');
+    print('Jaguar.dart CLI 2.1.1');
   }
 }
