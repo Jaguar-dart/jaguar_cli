@@ -18,8 +18,8 @@ const _templates = const <_Template>[
       'https://github.com/jaguar-examples/boilerplate_mux',
       'Simplest Jaguar project possible. Shows routing using RouteHandlers and mux.'),
   const _Template(
-      'boilerplate_reflect',
-      'https://github.com/jaguar-examples/boilerplate_reflect',
+      'boilerplate',
+      'https://github.com/jaguar-examples/boilerplate',
       'Simplest Jaguar project possible. Shows routing using Controllers and reflection.'),
   const _Template('https', 'https://github.com/jaguar-examples/https',
       'A sample HTTPS project.'),
